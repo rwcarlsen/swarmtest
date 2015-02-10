@@ -15,13 +15,13 @@ good convergence over # evaluations but requires many iterations, that cannot
 be parallelized to decrease run time.
 
 
-I have some scripts and data for plotting.  `fitness-#.dat` files contain #
+I have some scripts and data for plotting.  `jega-ans#.dat` files contain #
 evaluations at each iteration vs best objective from each of the 4 scenarios
 from the DAKOTA JEGA solver.  To see plots of dakota evaluation convergence vs
 PSwarm, run:
 
 ```
-./converge [swarmdb-file] [corresponding-fitness.dat-file]
+./converge [swarmdb-file] [corresponding-jega-ans#.dat-file]
 ```
 
-to see a plot of objective function value vs # iterations.
+The pswarm database files for each run are in the pswarm-ans.tar.gz file.
