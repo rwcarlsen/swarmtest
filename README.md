@@ -18,10 +18,17 @@ be parallelized to decrease run time.
 I have some scripts and data for plotting.  `jega-ans#.dat` files contain #
 evaluations at each iteration vs best objective from each of the 4 scenarios
 from the DAKOTA JEGA solver.  To see plots of dakota evaluation convergence vs
-PSwarm, run:
+my PSwarm, vs my improved PSwarm (with projection) run:
 
 ```
-./converge [swarmdb-file] [corresponding-jega-ans#.dat-file]
+gnuplot converge-all.gp
 ```
 
-The pswarm database files for each run are in the pswarm-ans.tar.gz file.
+The data for this plot are contained in three sets of files that contain best
+objective achieved vs # function evaluations for each of 3 solvers/configs on
+each of my 4 ans optimization scenarios:
+
+* `jega-ans#.dat`: DAKOTA JEGA solver
+* `converge#.dat`: my PSwarm solver
+* `converge#-new.dat`: my PSwarm solver with feasible projection
+
